@@ -8,17 +8,21 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <div className="bg-black h-full text-white pl-12">
     <React.StrictMode>
-      <div>
-        <video
-          src="/videos/jupiter1.mkv"
-          autoPlay
-          loop
-          muted
-          className="h-full w-screen object-cover"
-        />
-      </div>
-      <Cover />
-      <Profile />
+    <div style={{ position: 'relative' }}>
+  <video
+    src="/videos/jupiter1.mkv"
+    autoPlay
+    loop
+    muted
+    className="h-[1700px] w-full object-cover"
+  />
+  <div style={{ position: 'absolute', top: 0, left: 0 }}>
+    <Cover />
+    <Profile />
+  </div>
+</div>
+
+      
     </React.StrictMode>
   </div>
 );
