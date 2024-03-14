@@ -32,19 +32,13 @@ function Profile() {
             <div key={button.name}>
               <button
                 onClick={() => handleButtonClick(button.name)}
-                className="transition-all duration-300 border-t-2 w-full pt-4 pb-4 items-start"
+                className="transition-all duration-300 border-t-2 w-full pt-4 pb-4 flex items-start"
               >
                 <p className="text-2xl">{button.name}</p>
               </button>
-              <div
-                className={`${
-                  activeButton === button.name
-                    ? "opacity-100 transition-opacity duration-500 ease-in-out"
-                    : "opacity-0 h-0 overflow-hidden"
-                }`}
-              >
-                <p>{button.text}</p>
-              </div>
+              <div className="overflow-hidden transition-all duration-500" style={{ maxHeight: activeButton === button.name ? "500px" : "0", opacity: activeButton === button.name ? 1 : 0 }}>
+              <p className="text-7xl">{button.text}</p>
+            </div>
             </div>
           ))}
         </div>
