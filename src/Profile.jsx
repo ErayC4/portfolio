@@ -39,9 +39,8 @@ function Profile() {
                       fill="currentColor"
                       viewBox="0 0 16 16"
                       className={`w-6 h-6 ${
-                        activeButton === button.name
-                          ? "rotate-180 transition duration-500 ease-in-out"
-                          : ""
+                        activeButton === button.name && "rotate-180 transition duration-500 ease-in-out"
+
                       }`}
                     >
                       <path
@@ -57,7 +56,7 @@ function Profile() {
                       className={`w-6 h-6 ${
                         activeButton === button.name
                           ? "rotate-90 transition duration-500 ease-in-out"
-                          : ""
+                          : "transition duration-500 ease-in-out"
                       }`}
                     >
                       <path
