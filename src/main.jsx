@@ -7,7 +7,7 @@ import "./index.css";
 import Skills from "./Skills.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <div className="bg-black h-full text-white pl-12 ">
+  <div className="bg-black h-full text-white pl-24 ">
     <React.StrictMode>
       <div className="relative">
         <video
