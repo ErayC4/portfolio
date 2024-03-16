@@ -2,18 +2,21 @@ import React from "react";
 
 function Profile() {
   const [activeButton, setActiveButton] = React.useState(null);
+
   const buttonContent = [
-    { name: "My Story", text: "Beliebiger Text für Button 1" },
+    { name: "BlaBla", text: (<div className="bg-red-600">hi</div>) },
     { name: "My Vision", text: "Beliebiger Text für Button 2" },
     { name: "My Impact", text: "Beliebiger Text für Button 3" },
   ];
 
+
   const handleButtonClick = (name) => {
     setActiveButton(activeButton === name ? null : name);
   };
+  
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col pt-40">
       <div className="w-1/2">
         <p className="text-8xl pb-8">About Me</p>
 
@@ -28,7 +31,7 @@ function Profile() {
               <div className="flex items-center border-t-2">
                 <button
                   onClick={() => handleButtonClick(button.name)}
-                  className="transition-all duration-300 w-full py-4 flex items-start"
+                  className="w-full py-4 flex items-start"
                 >
                   <p className="text-2xl">{button.name}</p>
                 </button>
@@ -75,7 +78,7 @@ function Profile() {
                   opacity: activeButton === button.name ? 1 : 0,
                 }}
               >
-                <p className="text-lg pb-4">{button.text}</p>
+                <div className="text-lg pb-4">{button.text}</div>
               </div>
             </div>
           ))}

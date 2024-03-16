@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import Cover from "./Cover.jsx";
 import Profile from "./Profile.jsx";
 import "./index.css";
 import Skills from "./Skills.jsx";
+import Projects from "./Projects.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <div className="bg-black h-full text-white pl-24 ">
@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Profile />
           </div>
         <Skills />
-        
+        <Projects />
       </div>
     </React.StrictMode>
   </div>
