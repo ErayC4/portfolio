@@ -4,16 +4,14 @@ function Profile() {
   const [activeButton, setActiveButton] = React.useState(null);
 
   const buttonContent = [
-    { name: "BlaBla", text: (<div className="bg-red-600">hi</div>) },
+    { name: "BlaBla", text: <div className="bg-red-600">hi</div> },
     { name: "My Vision", text: "Beliebiger Text für Button 2" },
     { name: "My Impact", text: "Beliebiger Text für Button 3" },
   ];
 
-
-  const handleButtonClick = (name) => {
-    setActiveButton(activeButton === name ? null : name);
+  const handleButtonClick = (index) => {
+    setActiveButton(activeButton === index ? null : index);
   };
-  
 
   return (
     <div className="h-screen flex flex-col pt-40">
@@ -28,48 +26,39 @@ function Profile() {
         <div className="pt-8">
           {buttonContent.map((button) => (
             <div key={button.name}>
-              <div className="flex items-center border-t-2">
-                <button
-                  onClick={() => handleButtonClick(button.name)}
-                  className="w-full py-4 flex items-start"
-                >
+              <button
+                className="flex justify-between items-center border-t-2 w-full py-4"
+                onClick={() => handleButtonClick(button.name)}
+              >
+                <button className=" flex items-start">
                   <p className="text-2xl">{button.name}</p>
                 </button>
-                <div className="">
-                  {activeButton === button.name ? (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                      className={`w-6 h-6 ${
-                        activeButton === button.name && "rotate-180 transition duration-500 ease-in-out"
-
-                      }`}
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
-                      />
-                    </svg>
-                  ) : (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                      className={`w-6 h-6 ${
-                        activeButton === button.name
-                          ? "rotate-90 transition duration-500 ease-in-out"
-                          : "transition duration-500 ease-in-out"
-                      }`}
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
-                      />
-                    </svg>
-                  )}
-                </div>
-              </div>
+                {activeButton === button.name ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                    className={"w-6 h-6 rotate-180 transition duration-500 ease-in-out"}
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                    className={"w-6 h-6 rotate-90 transition duration-500 ease-in-out"}
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+                    />
+                  </svg>
+                )}
+              </button>
 
               <div
                 className="overflow-hidden transition-all duration-300"
