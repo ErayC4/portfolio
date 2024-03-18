@@ -4,7 +4,7 @@ function Profile() {
   const [activeButton, setActiveButton] = React.useState(null);
 
   const buttonContent = [
-    { name: "BlaBla", text: <div className="bg-red-600">hi</div> },
+    { name: "My Story", text: "Bla Bla" },
     { name: "My Vision", text: "Beliebiger Text für Button 2" },
     { name: "My Impact", text: "Beliebiger Text für Button 3" },
   ];
@@ -27,7 +27,7 @@ function Profile() {
           {buttonContent.map((button) => (
             <div key={button.name}>
               <button
-                className="flex justify-between items-center border-t-2 w-full py-4"
+                className="flex justify-between items-center border-t-2 w-full py-8"
                 onClick={() => handleButtonClick(button.name)}
               >
                 <button className=" flex items-start">
@@ -50,7 +50,7 @@ function Profile() {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
                     viewBox="0 0 16 16"
-                    className={"w-6 h-6 rotate-90 transition duration-500 ease-in-out"}
+                    className={"w-6 h-6 rotate-270 transition duration-500 ease-in-out"}
                   >
                     <path
                       fillRule="evenodd"
