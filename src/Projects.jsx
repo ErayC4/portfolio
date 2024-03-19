@@ -3,6 +3,7 @@ import React from "react";
 function Projects() {
   const [activeButton, setActiveButton] = React.useState(null);
 
+  //max 7
   const projects = [
     { year: "//22", name: "Keyboards", type: "E-Commerce" },
     { year: "//22", name: "Computer", type: "Blog" },
@@ -17,25 +18,31 @@ function Projects() {
     setActiveButton(activeButton === index ? null : index);
   };
   return (
-    <div className="h-screen flex flex-col justify-center pr-24">
+    <div className="flex flex-col justify-center pr-24">
       <p className="text-8xl pb-16">Projects</p>
       <div>
+
+        <div className="w-1/2 text-2xl border-b py-8 flex justify-between">
+          <div className="grid grid-cols-3 justify-start">
+            <p className="w-64 flex items-start">Year</p>
+            <p className="w-64 flex items-start">Name</p>
+            <p className="w-64 flex items-start">Type</p>
+          </div>
+        </div>
         {projects.map((project) => (
           <div key={project.year}>
-            <div className="flex">
-              <button className="w-1/2">
-                <div className="grid grid-cols-3 text-2xl border-b border-r pr-4 py-8">
-                  <p className="flex items-center">{project.year}</p>
-                  <p className="flex items-center">{project.name}</p>
-                  <p className="flex items-center">{project.type}</p>
+            <button onClick={handleButtonClick} className="w-1/2">
+              <div className="text-2xl border-b py-8 flex justify-between">
+                <div className="grid grid-cols-3 justify-start">
+                  <p className="w-64 flex items-start">{project.year}</p>
+                  <p className="w-64 flex items-start">{project.name}</p>
+                  <p className="w-64 flex items-start">{project.type}</p>
                 </div>
-              </button>
-              <div>
-                <p>Hii</p>
               </div>
-            </div>
+            </button>
           </div>
         ))}
+        
       </div>
     </div>
   );
@@ -44,23 +51,5 @@ function Projects() {
 export default Projects;
 
 /*
-<div className="text-2xl border-t  py-8 flex justify-between">
-              <div className="flex gap-12 items-center">
-                <p>//22</p>
-                <p>Project Name</p>
-                <p>Project Type</p>
-              </div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-                className="w-6 h-6 pt-"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
-                />
-              </svg>
-            </div>
 */
