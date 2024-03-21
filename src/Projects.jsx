@@ -22,7 +22,7 @@ function Projects() {
       description:
         "Ut wisi enim ad minim veniam, quis sequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi",
       image: "/images/websiteCovers/websiteCover2.jpg",
-      technologiesUsed: ["React", "html", "css", "NextJs"],
+      technologiesUsed: ["React", "html", "ThreeJs", "NextJs"],
     },
     {
       year: "//22",
@@ -31,7 +31,7 @@ function Projects() {
       description:
         "Nam liber tempor cum soluta nobis eleifend option con. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ",
       image: "/images/websiteCovers/websiteCover3.jpg",
-      technologiesUsed: ["React", "html", "css", "NextJs"],
+      technologiesUsed: ["React", "GSAP", "css", "NextJs"],
     },
     {
       year: "//23",
@@ -40,7 +40,7 @@ function Projects() {
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipsci inviduntam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
       image: "/images/websiteCovers/websiteCover4.jpg",
-      technologiesUsed: ["React", "html", "css", "NextJs"],
+      technologiesUsed: ["React", "scss"],
     },
     {
       year: "//23",
@@ -49,7 +49,7 @@ function Projects() {
       description:
         "eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum d",
       image: "/images/websiteCovers/websiteCover4.jpg",
-      technologiesUsed: ["React", "html", "css", "NextJs"],
+      technologiesUsed: ["pimmel", "html", "css", "NextJs"],
     },
     {
       year: "//24",
@@ -58,7 +58,7 @@ function Projects() {
       description:
         "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.",
       image: "/images/websiteCovers/websiteCover5.jpg",
-      technologiesUsed: ["React", "html", "css", "NextJs"],
+      technologiesUsed: ["React", "html", "css", "NextJs", "otkrtokrt"],
     },
     {
       year: "//24",
@@ -67,7 +67,7 @@ function Projects() {
       description:
         "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla faci",
       image: "/images/websiteCovers/websiteCover6.jpg",
-      technologiesUsed: ["React", "html", "css", "NextJs"],
+      technologiesUsed: ["React", "html", "css", "heyo", "sketchy plugin"],
     },
   ];
 
@@ -129,13 +129,14 @@ function Projects() {
                       {projects[activeIndex].description}
                     </p>
                     <div className="flex justify-evenly py-4 mt-8 text-lg border-black border">
-                      <p>React</p>
-                      <span className="border-r border-black"></span>
-                      <p>NextJS</p>
-                      <span className="border-r border-black"></span>
-                      <p>HTML</p>
-                      <span className="border-r border-black"></span>
-                      <p>CSS</p>
+                      {projects[activeIndex].technologiesUsed.map(
+                        (item, index) => (
+                          <React.Fragment key={index}>
+                            {index > 0 && <span>|</span>}
+                            <span>{item}</span>
+                          </React.Fragment>
+                        )
+                      )}
                     </div>
 
                     <div className="flex justify-between mt-8 items-center">
@@ -176,7 +177,6 @@ function Projects() {
                         </button>
                       </div>
                     </div>
-
                   </div>
                 </div>
               )}
