@@ -1,82 +1,9 @@
 import React from "react";
+import projectsData from './projectsData.json'; // Importiere die JSON-Datei
 
 function Projects() {
   const [activeButton, setActiveButton] = React.useState(null);
   const [activeIndex, setActiveIndex] = React.useState(null); // Neue State-Variable für den aktiven Index
-
-  //max 7
-  const projects = [
-    {
-      year: "//22",
-      name: "Keyboards",
-      type: "E-Commerce",
-      description:
-        " ipsum dolor sit ametluptua. At vem, quis sequat. Duis autem vel eum iriure dolor in hendrerit in m, quis sequat. Duis autem vel eum iriure dolor in hendrerit in m, quis sequat. Duis autem vel eum iriure dolor in hendrerit in m, quis sequat. Duis autem vel eum iriure dolor in hendrerit in m, quis sequat. Duis autem vel eum iriure dolor in hendrerit in m, quis sequat. Duis autem vel eum iriure dolor in hendrerit in ro eos et accusam et justo duo dolores et ea rebum. Stet clit",
-      image: "/images/websiteCovers/websiteCover1.jpg",
-      technologiesUsed: ["React", "html", "css", "NextJs"],
-    },
-    {
-      year: "//22",
-      name: "Computer",
-      type: "Blog",
-      description:
-        "Ut wisi enim ad minim veniam, quis sequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi",
-      image: "/images/websiteCovers/websiteCover2.jpg",
-      technologiesUsed: ["React", "html", "ThreeJs", "NextJs"],
-    },
-    {
-      year: "//22",
-      name: "This is ME",
-      type: "portfolio",
-      description:
-        "Nam liber tempor cum soluta nobis eleifend option con. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ",
-      image: "/images/websiteCovers/websiteCover3.jpg",
-      technologiesUsed: ["React", "GSAP", "css", "NextJs"],
-    },
-    {
-      year: "//23",
-      name: "winecraft",
-      type: "game",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipsci inviduntam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
-      image: "/images/websiteCovers/websiteCover4.jpg",
-      technologiesUsed: ["React", "scss"],
-    },
-    {
-      year: "//23",
-      name: "Olga",
-      type: "E-Commerce",
-      description:
-        "eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum d",
-      image: "/images/websiteCovers/websiteCover4.jpg",
-      technologiesUsed: ["pimmel", "html", "css", "NextJs"],
-    },
-    {
-      year: "//24",
-      name: "tsx-3000 ultra",
-      type: "E-Commerce",
-      description:
-        "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.",
-      image: "/images/websiteCovers/websiteCover5.jpg",
-      technologiesUsed: ["React", "html", "css", "NextJs", "otkrtokrt"],
-    },
-    {
-      year: "//24",
-      name: "CHANGE",
-      type: "Education",
-      description:
-        "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla faci",
-      image: "/images/websiteCovers/websiteCover6.jpg",
-      technologiesUsed: [
-        "React",
-        "html",
-        "css",
-        "heyo",
-        "sketchy plugin",
-        "otkrtokrt",
-      ],
-    },
-  ];
 
   const handleButtonClick = (index) => {
     setActiveButton(activeButton === index ? null : index);
@@ -97,7 +24,7 @@ function Projects() {
 
         <div className="grid grid-cols-2 gap-32">
           <div>
-            {projects.map((project, index) => (
+            {projectsData.map((project, index) => (
               <div key={index}>
                 <button onClick={() => handleButtonClick(index)}>
                   <div
@@ -125,13 +52,13 @@ function Projects() {
                 <div className="bg-white text-black p-16">
                   <div key={activeIndex}>
                     <img
-                      src={projects[activeIndex].image}
+                      src={projectsData[activeIndex].image}
                       className="object-cover border-2 border-black"
                     />
                     <div className="flex justify-between items-center w-full pb-4 border-b border-black mt-8">
                       <div className="flex">
                         <p className="text-4xl font-bold">
-                          {projects[activeIndex].name}
+                          {projectsData[activeIndex].name}
                         </p>
                         <button className="pl-4 pb-1">
                           <svg
@@ -149,11 +76,11 @@ function Projects() {
                     </div>
 
                     <p className="text-lg w-full pt-4">
-                      {projects[activeIndex].description}
+                      {projectsData[activeIndex].description}
                     </p>
 
                     <div className="flex justify-evenly py-4 text-lg border-black border mt-8">
-                      {projects[activeIndex].technologiesUsed.map(
+                      {projectsData[activeIndex].technologiesUsed.map(
                         (item, index) => (
                           <React.Fragment key={index}>
                             {index > 0 && <span className="text-xl">|</span>}
