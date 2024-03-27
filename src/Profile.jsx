@@ -6,6 +6,7 @@ function Profile() {
   const buttonContent = [
     { name: "My Story", text: "Bla Bla" },
     { name: "My Vision", text: "Beliebiger Text für Button 2" },
+    { name: "My Skills", text: "Beliebiger Text für Button 3" },
     { name: "My Impact", text: "Beliebiger Text für Button 3" },
   ];
 
