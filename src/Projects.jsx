@@ -9,7 +9,7 @@ function Projects() {
   };
 
   return (
-    <div className="flex flex-col justify-center pr-24 pt-96">
+    <div className="flex flex-col justify-center pr-24 pt-96 transition-all duration-200 ease-in">
       <p className="text-8xl pb-16">PROJECTS</p>
 
       <div className="grid grid-cols-2 gap-32">

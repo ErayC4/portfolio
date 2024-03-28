@@ -5,9 +5,9 @@ function Profile() {
 
   const buttonContent = [
     { name: "My Story", text: "Bla Bla" },
-    { name: "My Vision", text: "Beliebiger Text für Button 2" },
-    { name: "My Skills", text: "Beliebiger Text für Button 3" },
-    { name: "My Impact", text: "Beliebiger Text für Button 3" },
+    { name: "My Vision", text: "Beliebiger Text für Button 2 Hey, I am a self taught UI/UX designer and Web-Developer, with aHey, I am a self taught UI/UX designer and Web-Developer, with a" },
+    { name: "My Skills", text: "Beliebiger Text für Button 3 Hey, I am a self taught UI/UX designer and Web-Developer, with a Hey, I am a self taught UI/UX designer and Web-Developer, with aHey, I am a self taught UI/UX designer and Web-Developer, with a" },
+    { name: "My Impact", text: "Beliebiger Text für Button 3 Hey, I am a self taught UI/UX designer and Web-Developer, with a" },
   ];
 
   const handleButtonClick = (index) => {
@@ -31,7 +31,7 @@ function Profile() {
                 className="flex justify-between items-center border-t-2 w-full py-8"
                 onClick={() => handleButtonClick(button.name)}
               >
-                <button className=" flex items-start">
+                <button className="flex items-start">
                   <p className="text-2xl">{button.name}</p>
                 </button>
                 {activeButton === button.name ? (
@@ -64,11 +64,11 @@ function Profile() {
               <div
                 className="overflow-hidden transition-all duration-300"
                 style={{
-                  maxHeight: activeButton === button.name ? "500px" : "0",
+                  maxHeight: activeButton === button.name ? "512px" : "0",
                   opacity: activeButton === button.name ? 1 : 0,
                 }}
               >
-                <div className="text-lg pb-4">{button.text}</div>
+                <div className="text-lg pb-4 w-3/4">{button.text}</div>
               </div>
             </div>
           ))}
