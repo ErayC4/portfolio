@@ -15,7 +15,7 @@ function Profile() {
   };
 
   return (
-    <div className="h-screen flex flex-col pt-40">
+    <div className="h-screen flex pt-40 gap-32">
       <div className="w-1/2">
         <p className="text-8xl pb-8">About Me</p>
 
@@ -73,6 +73,13 @@ function Profile() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="w-1/2 flex justify-center border border-white">
+        <div className="p-16 ">
+        <img src="/images/images.jpg" className="h-96 border border-white" alt="" />
+        <p className="text-2xl">Eray Coskun</p>
+        </div>
+
       </div>
     </div>
   );
