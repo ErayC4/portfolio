@@ -9,7 +9,7 @@ function Projects() {
   };
 
   return (
-    <div className="flex flex-col justify-center pr-24 pt-96 transition-all duration-200 ease-in">
+    <div className="flex flex-col">
       <p className="text-8xl pb-16">PROJECTS</p>
 
       <div className="grid grid-cols-2 gap-32">
@@ -62,11 +62,13 @@ function Projects() {
 
                   <p className="text-lg pt-4">4TH NOVEMBER 2023</p>
                 </div>
-
+                {/*
                 <p className="text-lg w-full pt-4">
                   {projectsData[activeButton].description}
                 </p>
-
+                
+                */}
+              
                 <div className="flex justify-evenly py-4 text-lg border-black border mt-8">
                   {projectsData[activeButton].technologiesUsed.map(
                     (item, index) => (

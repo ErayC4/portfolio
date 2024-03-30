@@ -18,9 +18,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       />
       <div className="absolute top-0 bottom-0 pr-24">
         <Cover />
-        <Profile />
+        <Projects />
       </div>
-      <Projects />
+      <div className="h-[512px]"></div>
+      <Profile />
       <ContactMe />
     </React.StrictMode>
   </div>
