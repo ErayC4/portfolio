@@ -2,7 +2,7 @@ import "./index.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Cover from "./Cover.jsx";
-import Profile from "./Profile.jsx";
+import AboutMe from "./AboutMe.jsx";
 import Projects from "./Projects.jsx";
 import ContactMe from "./ContactMe.jsx";
 
@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Projects />
       </div>
       <div className="h-[512px]"></div>
-      <Profile />
+      <AboutMe />
       <ContactMe />
     </React.StrictMode>
   </div>
