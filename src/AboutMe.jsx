@@ -9,7 +9,7 @@ function AboutMe() {
       name: "My Vision",
       text: "Beliebiger Text für Button 2 Hey, I am a self taught UI/UX designer and Web-Developer, with aHey, I am a self taught UI/UX designer and Web-Developer, with a",
     },
-    
+
     {
       name: "My Impact",
       text: "Beliebiger Text für Button 3 Hey, I am a self taught UI/UX designer and Web-Developer, with a",
@@ -22,32 +22,35 @@ function AboutMe() {
 
   return (
     <div className="pr-24">
-      <p className="text-8xl pb-8">About Me</p>
-      <div className="flex gap-16 pt-8">
+      <div className="flex justify-between text-4xl border-b border-white pb-4">
+            <div>
+              <p>Design</p>
+              <p>& Developement</p>
+            </div>
+            <div>
+              <p>Innovative</p>
+              <p>& New Approach</p>
+            </div>
+            <div>
+            <p>Expirienced</p>
+            <p>& Skilled</p>
+            </div>
+            
+          </div>
+      <div className="flex gap-16 pt-16">
         
         <div className="w-1/3">
-            
-            <div className="flex justify-between text-2xl py-4 border-b border-white">
-              <p>Eray Coskun</p>
-              <p>Front-End-Developer</p>
-            </div>
-            <p className="text-2xl pt-8">
-              Hey, I am a UI/UX designer and Web-Developer, with a passion to
-              learn new skills and technologies.
-            </p>
-            <p className="text-2xl pt-4">
-              I specialize in crafting modern websites that leaves a lasting impression.
-            </p>
-            
+          <img src="/images/images.jpg" className="h-96 w-full" alt="" />
         </div>
-        <div className="w-1/3">
-        <img
-              src="/images/images.jpg"
-              className="h-96 w-full border border-white"
-              alt=""
-            />
+        <div className="w-2/3">
+          
+          
+          <p className="text-2xl">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
         </div>
-        <div className="w-1/3">
+      </div>
+        <div className="w-2/3 mt-16">
           {buttonContent.map((button) => (
             <div key={button.name}>
               <button
@@ -100,7 +103,8 @@ function AboutMe() {
             </div>
           ))}
         </div>
-      </div>
+        
+        
     </div>
   );
 }
