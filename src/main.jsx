@@ -5,6 +5,7 @@ import Cover from "./Cover.jsx";
 import AboutMe from "./AboutMe.jsx";
 import Projects from "./Projects.jsx";
 import ContactMe from "./ContactMe.jsx";
+import MyCapabilities from "./MyCapabilities.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <div className="bg-black h-full text-white pl-24 ">
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </div>
       <div className="h-[512px]"></div>
       <AboutMe />
+      <MyCapabilities />
       <ContactMe />
     </React.StrictMode>
   </div>
