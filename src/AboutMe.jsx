@@ -44,9 +44,9 @@ function AboutMe() {
         </div>
         <div className="w-2/3">
           
-          
-          <p className="text-2xl">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          <p className="text-8xl">I am a developer, that makes dreams come true</p>
+          <p className="text-2xl w-1/2 pt-8">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et esit amet.
           </p>
         </div>
       </div>
