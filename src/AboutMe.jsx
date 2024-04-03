@@ -54,7 +54,7 @@ function AboutMe() {
           {buttonContent.map((button) => (
             <div key={button.name}>
               <button
-                className="flex justify-between items-center border-t-2 w-full py-8"
+                className="flex justify-between items-center border-t w-full py-8"
                 onClick={() => handleButtonClick(button.name)}
               >
                 <button className="flex items-start">
