@@ -40,7 +40,7 @@ function AboutMe() {
       <div className="flex gap-16 pt-16">
         
         <div className="w-1/3">
-          <img src="/images/images.jpg" className="h-96 w-full" alt="" />
+          <img src="/images/images.jpg" className="h-96 w-full rounded-xl" alt="" />
         </div>
         <div className="w-2/3">
           
