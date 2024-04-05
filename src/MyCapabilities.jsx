@@ -1,4 +1,5 @@
 import React from "react";
+import ThreeFiber from "./ThreeFiber";
 
 function MyCapabilities() {
   return (
@@ -11,10 +12,16 @@ function MyCapabilities() {
           <p className="text-4xl pb-4 border-b border-white">Design</p>
 
           <div className="flex gap-8 pt-8">
-            <p className="text-xl w-1/3">
+            <div className="w-1/3 pt-4">
+            <p className="text-xl">
               Design is at the very core of everything we do. We balance form,
               function, and feeling to develop brands in the digital space.
             </p>
+            <div className="pt-12 h-[300px]">
+              <ThreeFiber />
+            </div>
+            </div>
+            
             <div className="w-2/3">
               <p className="text-8xl border-b border-white pb-8">
                 UI/UX Design
@@ -27,6 +34,54 @@ function MyCapabilities() {
           </div>
         </div>
       </div>
+      
+      <div className="flex pb-32">
+        <p className="bg-white p-4 text-4xl text-black rounded-xl">/2/</p>
+
+        <div className="pt-4 pl-8">
+          <p className="text-4xl pb-4 border-b border-white">Development</p>
+
+          <div className="flex gap-8 pt-8">
+            <p className="text-xl w-1/3 pt-4">
+              Development is at the very core of everything we do. We balance logic,
+              efficiency, and innovation to create robust solutions in the digital space.
+            </p>
+            <div className="w-2/3">
+              <p className="text-8xl border-b border-white pb-8">
+                Web Development
+              </p>
+              <p className="text-8xl border-b border-white py-8">Mobile App Development</p>
+              <p className="text-8xl border-b border-white py-8">
+                Software Development
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex pb-32">
+        <p className="bg-white p-4 text-4xl text-black rounded-xl">/3/</p>
+
+        <div className="pt-4 pl-8">
+          <p className="text-4xl pb-4 border-b border-white">Marketing</p>
+
+          <div className="flex gap-8 pt-8">
+            <p className="text-xl w-1/3 pt-4">
+              Marketing is at the very core of everything we do. We balance strategy,
+              creativity, and data to promote brands effectively in the digital space.
+            </p>
+            <div className="w-2/3">
+              <p className="text-8xl border-b border-white pb-8">
+                Digital Marketing
+              </p>
+              <p className="text-8xl border-b border-white py-8">Content Marketing</p>
+              <p className="text-8xl border-b border-white py-8">
+                Social Media Marketing
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }

@@ -6,6 +6,7 @@ import AboutMe from "./AboutMe.jsx";
 import Projects from "./Projects.jsx";
 import ContactMe from "./ContactMe.jsx";
 import MyCapabilities from "./MyCapabilities.jsx";
+import ThreeFiber from "./ThreeFiber.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <div className="bg-black h-full text-white pl-24 ">
