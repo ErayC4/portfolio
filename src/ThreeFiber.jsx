@@ -1,35 +1,29 @@
 import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const Cube = ({ position, size, color }) => {
+function DesignGlobe() {
   const ref = useRef()
+
   useFrame((state, delta) => {
-    ref.current.rotation.x += delta
+    ref.current.rotation.y += delta/2
+  })
+
+  // Laden des Modells bei jedem Rendern
+  const loader = new GLTFLoader();
+  loader.load('/models/DesignGlobe1.gltf', (gltf) => {
+    ref.current.add(gltf.scene);
   });
 
-  return (
-    <mesh position={position} ref={ref}>
-      <boxGeometry args={size} />
-      <meshStandardMaterial color={color} />
-    </mesh>
-  );
-};
-
-function DesignGlobe() {
-  const gltf = useLoader(GLTFLoader, '/models/DesignGlobe.gltf')
-  const ref = useRef()
-  useFrame((state, delta) => {
-    ref.current.rotation.y += delta/3
-  })
-  return <primitive object={gltf.scene} scale={3} ref={ref} />
+  return <group ref={ref} scale={[3, 3, 3]} />
 }
 
 const ThreeFiber = () => {
   return (
-    <Canvas>
-      <directionalLight position={[0, 0, 2]} intensity={1} />
+    <Canvas camera={{rotation: [0, 0, -25 * Math.PI / 180] }}>
+      <ambientLight position={[0, 0, 2]} intensity={5} />
+      <DesignGlobe />
+      <DesignGlobe />
       <DesignGlobe />
     </Canvas>
   );

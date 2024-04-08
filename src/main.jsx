@@ -25,7 +25,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <div className="h-[512px]"></div>
       <AboutMe />
       <MyCapabilities />
+      
       <ContactMe />
+      
     </React.StrictMode>
   </div>
 );
