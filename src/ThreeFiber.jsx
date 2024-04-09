@@ -9,7 +9,6 @@ function DesignGlobe() {
     ref.current.rotation.y += delta/2
   })
 
-  // Laden des Modells bei jedem Rendern
   const loader = new GLTFLoader();
   loader.load('/models/DesignGlobe1.gltf', (gltf) => {
     ref.current.add(gltf.scene);
@@ -23,8 +22,7 @@ const ThreeFiber = () => {
     <Canvas camera={{rotation: [0, 0, -25 * Math.PI / 180] }}>
       <ambientLight position={[0, 0, 2]} intensity={5} />
       <DesignGlobe />
-      <DesignGlobe />
-      <DesignGlobe />
+
     </Canvas>
   );
 };
