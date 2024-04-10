@@ -1,5 +1,6 @@
 import React from "react";
 import ThreeFiber from "./ThreeFiber";
+import AnimatedBlob from "./AnimatedBlob";
 
 function MyCapabilities() {
   return (
@@ -27,13 +28,24 @@ function MyCapabilities() {
                   form, function, and feeling to develop brands in the digital
                   space.
                 </p>
-                <div className="pt-12 h-[256px]">
-                  <ThreeFiber />
+                <div className="relative flex justify-center items-center pt-12 h-[256px]">
+                  
+                  <div className="w-full absolute inset-0 z-0 mt-12 ml-32">
+                  <AnimatedBlob/>
+
+                  </div>
+                  
+
+                  <ThreeFiber className="absolute inset-0 z-1"/>
                 </div>
               </div>
               <div className="pt-[128px]">
-                <p className="text-xl text-violet-400 text-center">// Modern Design</p>
-                <p className="text-xl text-violet-400 text-center">// Responsive Layouts</p>
+                <p className="text-xl text-violet-400 text-center">
+                  // Modern Design
+                </p>
+                <p className="text-xl text-violet-400 text-center">
+                  // Responsive Layouts
+                </p>
               </div>
             </div>
           </div>
@@ -55,9 +67,13 @@ function MyCapabilities() {
               <p className="text-8xl py-8">Mobile Design</p>
             </div>
             <div className="w-1/2 flex justify-between items-center">
-            <div className="pt-[128px]">
-                <p className="text-xl text-violet-400 text-center">// Modern Design</p>
-                <p className="text-xl text-violet-400 text-center">// Responsive Layouts</p>
+              <div className="pt-[128px]">
+                <p className="text-xl text-violet-400 text-center">
+                  // Modern Design
+                </p>
+                <p className="text-xl text-violet-400 text-center">
+                  // Responsive Layouts
+                </p>
               </div>
               <div className="w-2/3">
                 <p className="text-xl text-center pt-4">
@@ -100,8 +116,12 @@ function MyCapabilities() {
                 </div>
               </div>
               <div className="pt-[128px]">
-                <p className="text-xl text-violet-400 text-center">// Modern Design</p>
-                <p className="text-xl text-violet-400 text-center">// Responsive Layouts</p>
+                <p className="text-xl text-violet-400 text-center">
+                  // Modern Design
+                </p>
+                <p className="text-xl text-violet-400 text-center">
+                  // Responsive Layouts
+                </p>
               </div>
             </div>
           </div>
