@@ -20,7 +20,7 @@ function Projects() {
                 <div
                   className={`text-2xl  py-8 flex justify-between ${
                     activeButton === index
-                      ? "bg-white text-black pl-16 rounded-xl"
+                      ? "bg-white text-black pl-16 "
                       : "bg-transparent"
                   }`}
                 >
@@ -41,7 +41,7 @@ function Projects() {
               <div key={activeButton}>
                 <img
                   src={projectsData[activeButton].image}
-                  className="object-cover border border-black rounded-xl h-96"
+                  className="object-cover border border-black h-96"
                 />
                 <div className="flex justify-between items-center w-full pb-4 border-b border-black mt-8">
                   <div className="flex">
@@ -69,7 +69,7 @@ function Projects() {
                 
                 */}
               
-                <div className="flex justify-evenly py-4 text-lg border-black  rounded-xl border mt-8">
+                <div className="flex justify-evenly py-4 text-lg border-black   border mt-8">
                   {projectsData[activeButton].technologiesUsed.map(
                     (item, index) => (
                       <React.Fragment key={index}>
@@ -79,7 +79,7 @@ function Projects() {
                     )
                   )}
                 </div>
-                <button className="w-full bg-black rounded-xl text-white text-2xl flex justify-center gap-4 py-4 mt-8">
+                <button className="w-full bg-black  text-white text-2xl flex justify-center gap-4 py-4 mt-8">
                   <p>Launch</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
