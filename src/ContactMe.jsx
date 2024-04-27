@@ -4,45 +4,16 @@ function ContactMe() {
   return (
     <div className="h-screen pr-24 flex flex-col justify-center">
       <div className="flex gap-16">
-
         <div className="flex flex-col w-1/2">
           <p className="text-8xl">LET’S BUILD</p>
           <p className="text-8xl">AMAZING THINGS</p>
           <p className="text-8xl">TOGETHER</p>
-        </div>
 
-        <div className="flex flex-col w-1/2">
-          <div className="grid grid-cols-2 gap-16">
-            <input
-              type="text"
-              placeholder="Name"
-              className="bg-transparent text-white text-lg border-b py-4"
-            />
-            <input
-              type="text"
-              placeholder="Email"
-              className="bg-transparent text-white text-lg border-b py-4"
-            />
-          </div>
-
-          <textarea
-            type="text"
-            placeholder="Message"
-            className="bg-transparent text-white text-lg border-b py-4"
-          />
-
-          <button className="border py-4 text-lg mt-16">SEND IT!</button>
-        </div>
-      </div>
-
-      <div className="flex pt-8 gap-16">
-        <div className="w-1/2 pt-4">
-          <p className="text-lg">
+          <p className="text-lg pt-8">
             Don’t be shy, i am open to talk to good people. Just say hello and
             i’ll start a productive cooperation.
           </p>
-          <p className="pt-4 text-lg">My Email: eray04.coskun@gmail.com</p>
-          <p className="text-lg">Call Me: +49 84842 8428 48</p>
+
           <div className="flex gap-4 mt-4">
             <button>
               <svg
@@ -65,6 +36,43 @@ function ContactMe() {
               </svg>
             </button>
           </div>
+        </div>
+
+        <div className="flex flex-col w-1/2">
+          <div className="grid grid-cols-2 gap-16">
+            <div className="border-b">
+              <p className="text-xl">Name & Lastname</p>
+              <input
+                type="text"
+                placeholder="..."
+                className="bg-transparent text-white text-lg w-full py-4"
+              />
+            </div>
+
+            <div className="border-b">
+              <p className="text-xl">Email</p>
+              <input
+                type="text"
+                placeholder="..."
+                className="bg-transparent text-white text-lg w-full py-4"
+              />
+            </div>
+          </div>
+
+          <p className="text-xl pt-8">Message</p>
+          <textarea
+            type="text"
+            placeholder="..."
+            className="bg-transparent text-white text-lg border-b py-4"
+          />
+
+          <button className="border py-4 text-lg mt-16">SEND IT!</button>
+        </div>
+      </div>
+
+      <div className="flex pt-8 gap-16">
+        <div className="w-1/2 pt-4">
+          
         </div>
       </div>
     </div>
