@@ -5,11 +5,11 @@ function ContactMe() {
     <div className="h-screen pr-24 flex flex-col justify-center">
       <div className="flex gap-16">
         <div className="flex flex-col w-1/2">
-          <p className="text-8xl">LET’S BUILD</p>
-          <p className="text-8xl">AMAZING THINGS</p>
-          <p className="text-8xl">TOGETHER</p>
+          <p className="text-8xl fugazOne text-rose-500">LET’S BUILD</p>
+          <p className="text-8xl fugazOne text-rose-500">AMAZING THINGS</p>
+          <p className="text-8xl fugazOne text-rose-500">TOGETHER</p>
 
-          <p className="text-lg pt-8">
+          <p className="text-xl pt-8">
             Don’t be shy, i am open to talk to good people. Just say hello and
             i’ll start a productive cooperation.
           </p>
@@ -66,7 +66,7 @@ function ContactMe() {
             className="bg-transparent text-white text-lg border-b py-4"
           />
 
-          <button className="border py-4 text-lg mt-16">SEND IT!</button>
+          <button className="border py-4 text-lg mt-16 rounded-full fugazOne">SEND IT!</button>
         </div>
       </div>
 

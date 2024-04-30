@@ -17,7 +17,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <AboutMe />
       <MyCapabilities />
       <ContactMe />
-      <AnimatedBlob />
     </React.StrictMode>
   </div>
 );

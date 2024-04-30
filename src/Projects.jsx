@@ -12,12 +12,12 @@ function Projects() {
   return (
     //container für alls
     <div>
-      <p className="text-rose-500 text-8xl fugazOne pb-16">PROJECTS</p>
-      <div className="grid grid-cols-3 gap-24 pb-96">
+      <p className="text-rose-500 text-8xl fugazOne pb-12">PROJECTS</p>
+      <div className="grid grid-cols-3 gap-24 pb-48">
       {/*Container für Latest */}
       <div className="col-span-2">
         <div className="flex justify-center items-center h-12 bg-rose-500">
-          <p className="text-xl text-black">Latest</p>
+          <p className="text-2xl text-black">Latest</p>
         </div>
         <div className="bg-[#292929] p-8 mt-12 ">
           <img
@@ -110,11 +110,11 @@ function Projects() {
       {/*Container für Most Viewed */}
       <div className="col-span-1">
         <div className="flex justify-center items-center h-12 bg-rose-500">
-          <p className="text-xl text-black">Most Viewed</p>
+          <p className="text-2xl text-black">Most Viewed</p>
         </div>
         {/*Container für 1. */}
         <div className="pt-12 border-b">
-          <div className="flex">
+          <div className="flex gap-4">
             <div className="w-1/4">
               <p className="text-8xl fugazOne w-full">1.</p>
               <p className="pb-4 text-l text-gray-400">26TH March</p>
@@ -148,7 +148,7 @@ function Projects() {
 
         {/*Container für 2. */}
         <div className="pt-12 border-b">
-          <div className="flex">
+          <div className="flex gap-4">
             <div className="w-1/4">
               <p className="text-8xl fugazOne w-full">2.</p>
               <p className="pb-4 text-l text-gray-400">26TH March</p>
@@ -182,7 +182,7 @@ function Projects() {
 
         {/*Container für 3. */}
         <div className="pt-12 border-b">
-          <div className="flex">
+          <div className="flex gap-4">
             <div className="w-1/4">
               <p className="text-8xl fugazOne w-full">3.</p>
               <p className="pb-4 text-l text-gray-400">26TH March</p>

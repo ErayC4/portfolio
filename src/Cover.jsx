@@ -15,7 +15,7 @@ function Cover() {
           digital experiences.
         </p>
         <div className="flex">
-          <button className="w-1/2 bg-rose-500 rounded-full h-12 text-xl text-black">
+          <button className="w-1/2 rounded-full h-12 text-xl border fugazOne">
             CONTACT ME!
           </button>
           <div className="ml-8">
