@@ -66,7 +66,7 @@ function ContactMe() {
             className="bg-transparent text-white text-lg border-b py-4"
           />
 
-          <button className="border py-4 text-lg mt-16 rounded-full fugazOne">SEND IT!</button>
+          <button className="border py-4 text-lg mt-16 rounded-full fugazOne                                          nnnnnnnn">SEND IT!</button>
         </div>
       </div>
 

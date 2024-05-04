@@ -110,10 +110,11 @@ function Projects() {
       {/*Container für Most Viewed */}
       <div className="col-span-1">
         <div className="flex justify-center items-center h-12 bg-rose-500">
-          <p className="text-2xl text-black">Most Viewed</p>
+          <p className="text-2xl text-black">My Favourites</p>
         </div>
         {/*Container für 1. */}
-        <div className="pt-12 border-b">
+        <div className="bg-[#292929] px-8 pt-8">
+        <div className="mt-12 border-b ">
           <div className="flex gap-4">
             <div className="w-1/4">
               <p className="text-8xl fugazOne w-full">1.</p>
@@ -145,9 +146,12 @@ function Projects() {
             </div>
           </div>
         </div>
+        </div>
+        
 
         {/*Container für 2. */}
-        <div className="pt-12 border-b">
+        <div className="bg-[#292929] px-8">
+        <div className="pt-12 border-b ">
           <div className="flex gap-4">
             <div className="w-1/4">
               <p className="text-8xl fugazOne w-full">2.</p>
@@ -179,9 +183,11 @@ function Projects() {
             </div>
           </div>
         </div>
+        </div>
+        
 
         {/*Container für 3. */}
-        <div className="pt-12 border-b">
+        <div className="pt-12 bg-[#292929] px-8">
           <div className="flex gap-4">
             <div className="w-1/4">
               <p className="text-8xl fugazOne w-full">3.</p>
